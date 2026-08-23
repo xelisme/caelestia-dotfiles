@@ -1,33 +1,43 @@
 #!/bin/sh
 set -e
 
-DOTDIR="$(cd "$(dirname "$0")" && pwd)/config"
+ROOT="$(cd "$(dirname "$0")" && pwd)"
 BACKUP_SUFFIX=".bak.$(date +%Y%m%d%H%M%S)"
 
-install_file() {
-    src="$DOTDIR/$1"
-    dst="$HOME/.config/$1"
-    [ -f "$src" ] || { echo "skip (tidak ada di repo): $1"; return 0; }
+place() {
+    src="$ROOT/$1"
+    dst="$HOME/$2"
+    if [ ! -f "$src" ]; then
+        echo "skip (tidak ada di repo): $1"
+        return 0
+    fi
     mkdir -p "$(dirname "$dst")"
     if [ -f "$dst" ] && ! cmp -s "$dst" "$src"; then
         cp "$dst" "$dst$BACKUP_SUFFIX"
-        echo "backup: $dst -> $dst$BACKUP_SUFFIX"
+        echo "backup: $2 -> $2$BACKUP_SUFFIX"
     fi
     cp "$src" "$dst"
-    echo "installed: $1"
+    echo "installed: $2"
 }
 
-for f in \
-    caelestia/hypr-vars.lua \
-    caelestia/hypr-user.lua \
-    caelestia/shell.json \
-    caelestia/user-config.fish \
-    caelestia/monitors/eDP-1/shell.json \
-    kitty/kitty.conf \
-    swappy/config \
-    environment.d/screenshots.conf
-do
-    install_file "$f"
+CONFIGS="\
+config/caelestia/hypr-vars.lua|.config/caelestia/hypr-vars.lua
+config/caelestia/hypr-user.lua|.config/caelestia/hypr-user.lua
+config/caelestia/shell.json|.config/caelestia/shell.json
+config/caelestia/user-config.fish|.config/caelestia/user-config.fish
+config/caelestia/monitors/eDP-1/shell.json|.config/caelestia/monitors/eDP-1/shell.json
+config/kitty/kitty.conf|.config/kitty/kitty.conf
+config/swappy/config|.config/swappy/config
+config/environment.d/screenshots.conf|.config/environment.d/screenshots.conf"
+
+BINS="bin/screenshot-full|.local/bin/screenshot-full"
+
+echo "$CONFIGS" | while IFS='|' read -r src dst; do
+    [ -n "$src" ] && place "$src" "$dst"
+done
+
+echo "$BINS" | while IFS='|' read -r src dst; do
+    [ -n "$src" ] && place "$src" "$dst" && chmod +x "$HOME/$dst"
 done
 
 echo "selesai. jalankan 'hyprctl reload' atau re-login."

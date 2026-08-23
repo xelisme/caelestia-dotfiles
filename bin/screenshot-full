@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+
+dir="$HOME/Pictures/Screenshots"
+mkdir -p "$dir"
+file="$dir/$(date +%Y%m%d%H%M%S).png"
+
+mon=$(hyprctl monitors -j | python3 -c "import json,sys; print(next(m['name'] for m in json.load(sys.stdin) if m.get('focused')))")
+grim -o "$mon" "$file"
+wl-copy < "$file" </dev/null >/dev/null 2>&1 &
+notify-send -i "$file" -a "Screenshot" "Screenshot disimpan" "$(basename "$file") - terkopi ke clipboard"

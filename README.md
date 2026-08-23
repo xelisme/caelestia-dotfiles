@@ -6,8 +6,9 @@ Kustomisasi pribadi di atas [Caelestia](https://github.com/caelestia-dots/caeles
 
 | File | Fungsi |
 |---|---|
-| `config/caelestia/hypr-vars.lua` | override variabel & keybind Hyprland (browser brave, terminal kitty, SUPER+W wallpaper, SUPER+SHIFT+N pindah window ke workspace, dll) |
+| `config/caelestia/hypr-vars.lua` | override variabel & keybind Hyprland (browser brave, terminal kitty, SUPER+W wallpaper, SUPER+SHIFT+N pindah window ke workspace, Print → auto-save screenshot, dll) |
 | `config/caelestia/hypr-user.lua` | bind tambahan: SUPER+W launcher wallpaper, Print screenshot auto-save |
+| `bin/screenshot-full` | script auto-save screenshot (grim + clipboard + notif, tanpa staging cache) |
 | `config/caelestia/shell.json` | setting caelestia shell |
 | `config/caelestia/monitors/eDP-1/shell.json` | setting shell per-monitor |
 | `config/caelestia/user-config.fish` | config fish user |

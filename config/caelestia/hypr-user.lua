@@ -10,3 +10,5 @@ hl.bind(
             .. "fi"
     )
 )
+
+hl.bind("Print", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/screenshot-full"), { locked = true })
