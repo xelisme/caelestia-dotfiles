@@ -1,4 +1,5 @@
 local vars = require("variables")
+local fn   = require("utils.functions")
 
 hl.bind(
     vars.kbWallpaper,
@@ -12,3 +13,5 @@ hl.bind(
 )
 
 hl.bind("Print", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/screenshot-full"), { locked = true })
+
+hl.bind(vars.kbObsidianWs, fn.toggle("obsidian"))

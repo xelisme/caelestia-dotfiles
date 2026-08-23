@@ -1,0 +1,12 @@
+{
+    "toggles": {
+        "obsidian": {
+            "obsidian": {
+                "enable": true,
+                "match": [{ "class": "obsidian" }],
+                "command": ["obsidian"],
+                "move": true
+            }
+        }
+    }
+}

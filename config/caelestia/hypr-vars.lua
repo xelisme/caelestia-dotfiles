@@ -7,6 +7,6 @@ return {
 	kbBrowser		= "SUPER + B",
 	kbWallpaper 		= "SUPER + W",
 	kbScreenshot		= "SUPER + SHIFT + ALT + P",
-	kbCloseWindow           = "ALT + F4"
-
+	kbCloseWindow           = "ALT + F4",
+	kbObsidianWs	= "SUPER + O"
 }

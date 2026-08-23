@@ -25,6 +25,7 @@ config/caelestia/hypr-vars.lua|.config/caelestia/hypr-vars.lua
 config/caelestia/hypr-user.lua|.config/caelestia/hypr-user.lua
 config/caelestia/shell.json|.config/caelestia/shell.json
 config/caelestia/user-config.fish|.config/caelestia/user-config.fish
+config/caelestia/cli.json|.config/caelestia/cli.json
 config/caelestia/monitors/eDP-1/shell.json|.config/caelestia/monitors/eDP-1/shell.json
 config/kitty/kitty.conf|.config/kitty/kitty.conf
 config/swappy/config|.config/swappy/config
