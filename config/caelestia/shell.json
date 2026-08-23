@@ -1,0 +1,27 @@
+{
+    "appearance": {
+        "transparency": {
+            "enabled": true
+        }
+    },
+    "background": {
+        "wallpaperEnabled": true
+    },
+    "dashboard": {
+        "dragThreshold": 50
+    },
+    "general": {
+        "apps": {
+            "terminal": [
+                "kitty"
+            ]
+        }
+    },
+    "services": {
+        "maxVolume": 1,
+        "useFahrenheit": false
+    },
+    "sidebar": {
+        "dragThreshold": 25
+    }
+}
