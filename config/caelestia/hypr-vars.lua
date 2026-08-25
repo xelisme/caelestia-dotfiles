@@ -2,6 +2,7 @@ return {
 	browser			= "brave",
 	terminal		= "kitty",
 	cursorTheme		= "GoogleDot-Black",
+	kbBrowser		= "",
 	kbTerminal		= "CTRL + ALT + T",
 	kbMoveWinToWs		= "SUPER + SHIFT",
 	kbWallpaper 		= "SUPER + W",
