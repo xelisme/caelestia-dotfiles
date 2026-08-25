@@ -15,3 +15,4 @@ hl.bind(
 hl.bind("Print", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/screenshot-full"), { locked = true })
 
 hl.bind(vars.kbObsidianWs, fn.toggle("obsidian"))
+hl.bind(vars.kbBraveWs, fn.toggle("Brave"))
