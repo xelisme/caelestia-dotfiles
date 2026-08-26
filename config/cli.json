@@ -1,0 +1,20 @@
+{
+    "toggles": {
+        "obsidian": {
+            "obsidian": {
+                "enable": true,
+                "match": [{ "class": "obsidian" }],
+                "command": ["obsidian"],
+                "move": true
+            }
+        },
+   	"brave": {
+            "brave": {
+                "enable": true,
+                "match": [{ "class": "brave" }],
+                "command": ["brave"],
+                "move": true
+            }
+        }
+    }
+}
