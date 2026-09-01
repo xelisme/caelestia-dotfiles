@@ -31,7 +31,9 @@ config/kitty/kitty.conf|.config/kitty/kitty.conf
 config/swappy/config|.config/swappy/config
 config/environment.d/screenshots.conf|.config/environment.d/screenshots.conf"
 
-BINS="bin/screenshot-full|.local/bin/screenshot-full"
+BINS="\
+bin/screenshot-full|.local/bin/screenshot-full
+bin/setup-hotspot.sh|.local/bin/setup-hotspot"
 
 echo "$CONFIGS" | while IFS='|' read -r src dst; do
     [ -n "$src" ] && place "$src" "$dst"

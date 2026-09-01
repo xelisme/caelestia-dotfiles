@@ -9,6 +9,7 @@ Kustomisasi pribadi di atas [Caelestia](https://github.com/caelestia-dots/caeles
 | `config/caelestia/hypr-vars.lua` | override variabel & keybind Hyprland (browser brave, terminal kitty, SUPER+W wallpaper, SUPER+SHIFT+N pindah window ke workspace, Print → auto-save screenshot, dll) |
 | `config/caelestia/hypr-user.lua` | bind tambahan: SUPER+W launcher wallpaper, Print screenshot auto-save, SUPER+O toggle workspace obsidian |
 | `bin/screenshot-full` | script auto-save screenshot (grim + clipboard + notif, tanpa staging cache) |
+| `bin/setup-hotspot.sh` | setup hotspot NAT/FORWARD untuk CachyOS (solve "connected no internet"; auto-detect uplink eth + AP wifi, MASQUERADE + FORWARD ACCEPT + unit systemd `hotspot-fix` anti-overwrite Docker/Tailscale) |
 | `config/caelestia/shell.json` | setting caelestia shell |
 | `config/caelestia/monitors/eDP-1/shell.json` | setting shell per-monitor |
 | `config/caelestia/user-config.fish` | config fish user |
