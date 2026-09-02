@@ -15,6 +15,14 @@
                 "command": ["brave"],
                 "move": true
             }
+        },
+	"code": {
+            "code": {
+                "enable": true,
+                "match": [{ "class": "code" }],
+                "command": ["code"],
+                "move": true
+            }
         }
     }
 }

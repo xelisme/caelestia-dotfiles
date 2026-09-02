@@ -16,3 +16,4 @@ hl.bind("Print", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.local/bin/screenshot-fu
 
 hl.bind(vars.kbObsidianWs, fn.toggle("obsidian"))
 hl.bind(vars.kbBraveWs, fn.toggle("brave"))
+hl.bind(vars.kbCodeWs, fn.toggle("code"))

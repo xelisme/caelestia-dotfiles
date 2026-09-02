@@ -9,5 +9,6 @@ return {
 	kbScreenshot		= "SUPER + SHIFT + ALT + P",
 	kbCloseWindow           = "ALT + F4",
 	kbObsidianWs		= "SUPER + O",
-	kbBraveWs		= "SUPER + B"
+	kbBraveWs		= "SUPER + B",
+	kbCodeWs		= "SUPER + C"
 }
